@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To-do list - Lista de tarefas desenvolvida em HTML, CSS e JavaScript. Adicione, remova e gerencie suas tarefas de forma eficiente.">
+    <meta name="keywords" content="To-do list, lista de tarefas, HTML, CSS, JavaScript, front-end, programação, desenvolvimento web">
+    <meta name="author" content="Jota / José Guilherme Pandolfi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f1f1f1">
+        
+    <!-- Título da página -->
+    <title>To-do list</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+        
+    <!-- Meta tags de geolocalização -->
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="Araraquara">
+    <meta name="geo.position" content="-21.7874;-48.1783">
+    <meta name="ICBM" content="-21.7874,-48.1783">
+    
+    <!-- Meta tags para redes sociais -->
+    <meta property="og:title" content="To-do list">
+    <meta property="og:description" content="Uma simples lista de tarefas desenvolvida em HTML, CSS e JavaScript. Adicione, remova e gerencie suas tarefas de forma eficiente.">
+    <meta property="og:image" content="URL_da_imagem.jpg">
+    <meta property="og:url" content="URL_do_seu_site">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="To-do list">
+    <meta name="twitter:description" content="Uma simples lista de tarefas desenvolvida em HTML, CSS e JavaScript. Adicione, remova e gerencie suas tarefas de forma eficiente.">
+    <meta name="twitter:image" content="URL_da_imagem.jpg">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Cabeçalho principal da página -->
+    <header>
+        <h1>To-do list</h1>
+    </header>
+
+    <!-- Seção principal da página (conteúdo principal) -->
+    <main>
+        <!-- Seção onde as tarefas serão listadas -->
+        <section id="section-to-do-list">
+            <h2>Suas tarefas</h2>
+            <ul id="to-do-list">
+                <!-- As tarefas serão adicionadas dinamicamente aqui via JavaScript -->
+            </ul>
+
+            <button id="limpar-tudo" style="display: none;">Limpar tudo</button>
+        </section>
+
+        <!-- Seção para adicionar nova tarefa -->
+        <section id="section-adicionar-tarefa">
+            <h2>Adicionar nova tarefa</h2>
+            <form id="form-adicionar-tarefa">
+                <label for="input-nova-tarefa">Insira sua nova tarefa:</label>
+                <input type="text" id="input-nova-tarefa" placeholder="Digite sua tarefa aqui..." required>
+                <button type="submit" aria-label="Adicionar nova tarefa">Adicionar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Desenvolvido por <a href="https://hub.agenciam2a.com.br/" target="_blank" rel="noopener noreferrer">Jota / José Guilherme Pandolfi</a> - &copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js" defer></script>
+</body>

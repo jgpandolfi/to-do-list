@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reseta estilos padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout do body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Cabeçalho ocupa toda a largura */
+header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Rodapé ocupa toda a largura */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Centraliza o conteúdo principal e aplica o estilo padrão */
+main {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Estilo do cabeçalho */
+header h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Estilo da lista de tarefas */
+#to-do-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#to-do-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: space-between; /* Espaça os itens ao longo da linha */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+#to-do-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do formulário para adicionar tarefas */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Estilo do botão de adicionar tarefa */
+button[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    font-weight: 600;
+}
+
+/* Rodapé da página */
+footer p {
+    font-size: 0.9rem;
+    color: #d3d3d3;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o botão de remover tarefa e para o botão de Limpar tudo */
+.btn-remover, #limpar-tudo {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-remover:hover, #limpar-tudo:hover {
+    background-color: #e53935;
+}
+
+/* Estilo para a checkbox */
+.checkbox-tarefa {
+    appearance: none; /* Remove o estilo padrão da checkbox */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cbcbcb; /* Cor da borda */
+    border-radius: 50%; /* Checkbox redonda */
+    margin-right: 10px; /* Espaço entre a checkbox e o texto */
+    cursor: pointer;
+    outline: none;
+    position: relative; /* Necessário para posicionar o sinal de verificação */
+}
+
+/* Estilo para quando a checkbox está marcada */
+.checkbox-tarefa:checked {
+    background-color: transparent; /* Mantendo fundo transparente */
+}
+
+/* Sinal de verificação */
+.checkbox-tarefa:checked::after {
+    content: ''; /* Adicionando conteúdo vazio para o pseudo-elemento */
+    position: absolute;
+    top: 2px; /* Ajuste de posição */
+    left: 5px; /* Ajuste de posição */
+    width: 10px; /* Largura do sinal */
+    height: 10px; /* Altura do sinal */
+    border: solid #4caf50; /* Cor do sinal */
+    border-width: 0 2px 2px 0; /* Criando o formato de check */
+    transform: rotate(45deg); /* Rotacionando para criar o sinal de verificação */
+}
+
+/* Estilo quando a checkbox está marcada e o texto riscado */
+.checkbox-tarefa:checked + span {
+    text-decoration: line-through; /* Riscando o texto */
+}
+
+
+/* Layout responsivo */
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
